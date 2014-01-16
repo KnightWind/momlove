@@ -2,8 +2,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <div id="head">
     <div class="header_left">
-		<img id="logo_icon" class="logo png" src="/static/images/logo.png" width="100" height="48" alt=""/>
-    <span class="name">上海会畅内部信息管理平台</span>
+		<img id="logo_icon" class="logo png" src="/images/bg/mom.jpg" width="100" alt=""/>
+    <span class="name">母爱时光信息管理平台</span>
     </div>
     <c:if test="${!empty user}">
     <div class="header_right">

@@ -52,8 +52,6 @@ var zNodes =[
 	{ id:35, pId:3, name:"系列5", url:"/manage/infolist/35", target:"mainFrame"},
 	{ id:5, pId:4, name:"联系我们", url:"/manage/infolist/5", target:"mainFrame"},
 	{ id:85, pId:8, name:"产品展示", url:"/manage/photolist/85", target:"mainFrame"}
-	//{ id:8, pId:1, name:"Nothing...", url:"", target:"_blank", click:"alert('我是不会跳转的...');"}
-	 
 ];
 
 $(document).ready(function(){
@@ -88,7 +86,7 @@ function loadReady() {
 	<iframe frameborder="0" width="100%" height="620px;" id="mainFrame" name="mainFrame" scrolling="no" src="/login/welcome"></iframe>
 </div>
  <div id="copy">
-<span class="copy_text" >Copyright © 2003-2012 Shanghai Shrine Telecom Co., Ltd. 2012. All rights reserved.Version:eMeeting V5.0</span>
+<span class="copy_text" >Copyright © 2003-2016 母爱时光</span>
 </div>
 </body>
 </HTML>
