@@ -9,8 +9,11 @@
 <link rel="stylesheet" type="text/css" href="${baseUrlStatic}/css/enterprise/reset.css"/>
 <link rel="stylesheet" type="text/css" href="${baseUrlStatic}/css/enterprise/rightbox.css"/>
 <SCRIPT type="text/javascript" src="/static/js/jquery-1.8.3.js"></SCRIPT>
-<script type="text/javascript" src="/static/js/jquery-validation-1.10.0/dist/jquery.validate.js"></script>
- 
+<script type="text/javascript" charset="utf-8" src="/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="/ueditor/ueditor.all.min.js"> </script>
+    <!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败-->
+    <!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
+<script type="text/javascript" charset="utf-8" src="/ueditor/lang/zh-cn/zh-cn.js"></script> 
 <script type="text/javascript">
 function uploadCallback(url){
 	$("#previewLoadImg").hide();
@@ -32,12 +35,12 @@ function submitForm(){
 <body>
 <div class="y_emile">
 <div class="y_emile_01">
-   	<div class="y_emile_01_top"><span>照片信息：</span></div>
+   	<div class="y_emile_01_top"><span>编辑信息：</span></div>
    	<form name="profileForm" id="profileForm" action="/manage/savePhoto" method="post">
 		<table class="form-table" style="margin-left:60px">
 		  <tr>
 		    <td align="right">
-		    	照片标题：
+		    	标题：
 		    </td>
 		    <td class="form-table-td">
 		    	<input type="hidden" id="infoId" name="id" value="${info.id }"/>
@@ -50,6 +53,7 @@ function submitForm(){
 	       			</c:otherwise>
 	       		</c:choose>
 		    	<input type="hidden" id="moduleId" name="moduleId" value="${moduleId}"/>
+		    	<input type="hidden" id="uecontent" name="content" value=""/>
 		    	<input id="infotitle" name="title" class="text-input" type="text" value="${info.title }"/>
 		    </td>
 		  </tr>
@@ -90,16 +94,14 @@ function submitForm(){
 		    	照片描叙：
 		    </td>
 		    <td class="form-table-td">
-		    	 <div style="position: relative;width: 690px;overflow: hidden;">
-					<textarea rows="6" cols="42" name="photodesc">${info.content} ${info.photodesc}</textarea>
-		    	</div>
+		    	 <script id="editor" type="text/plain" style="width:750px;height:500px;"></script>
 		    </td>
 		  </tr>
 		  <tr>
 			 <td align="right">
 			 </td>
 		  	<td align="center" >
-		  		<input type="button" value="提交"  id="submit_btn" onclick="submitForm();"/>
+		  		<input type="button" value="提交"  id="submit_btn" onclick="saveInfo();"/>
 		  	</td>
 		  </tr>
 		</table>    	
@@ -108,4 +110,24 @@ function submitForm(){
 	</div>
 </div>
 </body>
+<script>
+	$(document).ready(function(){
+		var content = '${info.content}';
+		var ue = UE.getEditor('editor');
+		ue.addListener("ready", function () {
+	        // editor准备好之后才可以使用
+	        ue.setHeight(300);
+	        ue.setContent(content);
+		});
+	});
+	 
+	 
+	 function saveInfo(){
+		 var ue = UE.getEditor('editor');
+		  var con = ue.getContent();
+		  $("#uecontent").val(con);
+		  $("#profileForm").submit();
+		  $("#submit_btn").attr("disabled","disabled");
+	 }
+</script>
 </html>

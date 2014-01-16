@@ -98,4 +98,11 @@ public interface InfoService {
 	 */
 	void updateInfo(BizInfo info)throws Exception;
 	
+	
+	PageBean<BizInfo> getAllProductsPage(int pagesize,
+			int pageNo)throws Exception;
+	
+	
+	public List<BizInfo> getIndexProductInfos()throws Exception;
+	
 }

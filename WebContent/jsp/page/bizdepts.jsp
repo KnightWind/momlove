@@ -30,6 +30,22 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 								</ul>
 							</div>
 						</div>
+						<div class="acc-container">
+							<h3  class="acc-default-title showcursor">联系方式</h3>
+							<div class="acc-content">
+								<ul>
+										<li>地址：湖南省武冈市工业园</li>
+										<li>电话：0739888888</li>
+										<li>手机：18873907576</li>
+										<li>邮箱：18873907676@163.com</li>
+										<li>联系人：刘孙球</li>
+										<li>&nbsp;</li>
+										<li>&nbsp;</li>
+										<li>&nbsp;</li>
+										<li>&nbsp;</li>
+								</ul>
+							</div>
+						</div>
 					</td>
 					<td>
 						<div class="ml10">
@@ -46,29 +62,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 									</h3>
 									<div class="acc-content acc-content-list">
 										<ul>
-											<c:forEach var="info" items="${pageModel.datas}" varStatus="status">
-												<c:choose>
-													<c:when test="${fn:length(pageModel.datas) eq  (status.index+1)}">
-														<li>
-															<a class="li-middle-width nobr" href="/view/${info.id }">
-																<i class="icon icon-arrow"></i> ${info.title }
-															</a>
-															<span class='time'>
-																		<fmt:formatDate value="${info.createTime}" type="date" pattern="yyyy-MM-dd"/>
-															</span>
-														</li>
-													</c:when>
-													<c:otherwise>
-														<li class="bbds">
-														<a class="li-middle-width nobr" href="/view/${info.id }">
-															<i class="icon icon-arrow"></i> ${info.title }
+											<c:forEach var="actvit" items="${pageModel.datas}" varStatus="status">
+												<li>
+													<div style="width: 150px; max-height: 100px; overflow: hidden; text-align:center;margin: 0 auto;" >
+														<a  class="fl" href="/view/${actvit.id }"  >
+														<img style="max-height: 100px;" width="150"  src="${actvit.avatarUrl }"" alt="${actvit.title }"" />
 														</a>
-														<span class='time'>
-																	<fmt:formatDate value="${info.createTime}" type="date" pattern="yyyy-MM-dd"/>
-																</span>
-														</li>
-													</c:otherwise>
-												</c:choose>
+													</div>
+												</li>
 											</c:forEach>
 										</ul>
 									</div>

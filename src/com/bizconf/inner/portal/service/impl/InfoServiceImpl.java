@@ -31,6 +31,13 @@ public class InfoServiceImpl extends BaseService implements InfoService  {
 		String sql = "select * from t_biz_info where module_id = "+moudelId+" order by create_time desc ";
 		return getPageBeans(BizInfo.class, sql, pageNo,pagesize);
 	}
+	
+	@Override
+	public PageBean<BizInfo> getAllProductsPage(int pagesize,
+			int pageNo)throws Exception {
+		String sql = "select * from t_biz_info where module_id > 30 and module_id <40 order by create_time desc ";
+		return getPageBeans(BizInfo.class, sql, pageNo,pagesize);
+	}
 
 	@Override
 	public BizInfo saveBizInfo(BizInfo info) throws Exception {
@@ -95,6 +102,12 @@ public class InfoServiceImpl extends BaseService implements InfoService  {
 	public List<BizInfo> getIndexStaticInfos(int moudelId)throws Exception{
 		String sql = "select * from t_biz_info where module_id = ? and show_index = 1 order by update_time desc";
 		return libernate.getEntityListBase(BizInfo.class, sql, new Object[]{moudelId});
+	}
+	
+	@Override
+	public List<BizInfo> getIndexProductInfos()throws Exception{
+		String sql = "select * from t_biz_info where  module_id > 30 and module_id <40 and show_index = ? order by update_time desc";
+		return libernate.getEntityListBase(BizInfo.class, sql ,new Object[]{1});
 	}
 
 	@Override

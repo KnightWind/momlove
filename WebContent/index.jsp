@@ -151,7 +151,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					var url = "/goto/"+mId;
 					$("#downloadcenter").trigger("click");
 					$("#mainFrame").attr("src",url);
-				}else if(mId){
+				}else if(mId==30){
 					var url = "/goto/"+mId;
 					$("#products").trigger("click");
 					$("#mainFrame").attr("src",url);

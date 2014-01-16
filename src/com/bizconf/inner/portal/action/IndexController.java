@@ -40,15 +40,15 @@ public class IndexController {
 		String forward = "/jsp/page/main.jsp";
 		if(moduleId==0){
 			//北京销售
-			request.setAttribute("bjsales", infoService.getIndexStaticInfos(81));
+			//request.setAttribute("bjsales", infoService.getIndexStaticInfos(81));
 			//上海销售
-			request.setAttribute("shsales", infoService.getIndexStaticInfos(82));
+			//request.setAttribute("shsales", infoService.getIndexStaticInfos(82));
 			//新人秀
-			request.setAttribute("newers", infoService.getIndexStaticInfos(84));
+			//request.setAttribute("newers", infoService.getIndexStaticInfos(84));
 			//团队照片
-			request.setAttribute("groupactvits", infoService.getIndexStaticInfos(85));
+			request.setAttribute("groupactvits", infoService.getIndexProductInfos());
 			//优秀员工
-			request.setAttribute("excellenters", infoService.getIndexStaticInfos(83));
+			//request.setAttribute("excellenters", infoService.getIndexStaticInfos(83));
 			//公告
 			request.setAttribute("placards", infoService.getPlacardStaticInfos());
 		}
@@ -61,7 +61,11 @@ public class IndexController {
 			
 			request.setAttribute("pageModel", infoService.getInfosByMoudel(moduleId, 10, pageNo));
 			forward = "/jsp/page/bizdepts.jsp";
+		}else if(moduleId==30){
+			request.setAttribute("pageModel", infoService.getInfosByMoudel(moduleId, 10, pageNo));
+			forward = "/jsp/page/bizdepts.jsp";
 		}else if(moduleId>4 && moduleId<8){
+			
 			request.setAttribute("pageModel", infoService.getInfosByMoudel(moduleId, 10, pageNo));
 			forward = "/jsp/page/downloads.jsp";
 		}

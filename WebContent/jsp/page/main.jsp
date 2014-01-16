@@ -51,10 +51,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 								<div class="acc-content">
 <%--									<ul id="ul_application">--%>
 									<ul>
-										<li>地址：湖南省武冈市湘三街</li>
+										<li>地址：湖南省武冈市工业园</li>
 										<li>电话：0739888888</li>
-										<li>手机：18873907676</li>
-										<li>邮箱：momlove@gmail.com</li>
+										<li>手机：18873907576</li>
+										<li>邮箱：18873907676@163.com</li>
 										<li>联系人：刘孙球</li>
 										<li>&nbsp;</li>
 										<li>&nbsp;</li>
@@ -98,15 +98,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 									<div class="acc-content team-photos">
 <%--										<ul id="ul_groupactives">--%>
 										<ul>
-										<c:forEach var="actvit" items="${groupactvits}" varStatus="status">
-											<li>
-												<div style="width: 150px; max-height: 100px; overflow: hidden; text-align:center;margin: 0 auto;" >
-													<a  class="fl" href="/view/${actvit.id }"  >
-													<img style="max-height: 100px;" width="150"  src="${actvit.avatarUrl }"" alt="${actvit.title }"" />
-													</a>
-												</div>
-											</li>
-										</c:forEach>
+											<c:forEach var="actvit" items="${groupactvits}" varStatus="status">
+												<li>
+													<div style="width: 150px; max-height: 100px; overflow: hidden; text-align:center;margin: 0 auto;" >
+														<a  class="fl" href="/view/${actvit.id }"  >
+														<img style="max-height: 100px;" width="150"  src="${actvit.avatarUrl }"" alt="${actvit.title }"" />
+														</a>
+													</div>
+												</li>
+											</c:forEach>
 										</ul>
 										<div class="clearfix"></div>
 										<div class="more-data">

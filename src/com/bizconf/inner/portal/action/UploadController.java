@@ -9,7 +9,6 @@ import java.io.FileNotFoundException;
 
 import javax.servlet.http.HttpServletRequest;
 
-import com.bizconf.inner.portal.util.ImageTool;
 import com.bizconf.inner.portal.util.StringUtil;
 import com.bizconf.inner.portal.util.UploadUtil;
 import com.libernate.liberc.ActionForward;
