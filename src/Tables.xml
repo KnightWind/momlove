@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tables[
+<!ELEMENT tables (default, table*)>
+<!ELEMENT table (entity, name, primary-key, order-by?, field-maps?, datasource?, db-type?)>
+<!ELEMENT default (datasource?, db-type?)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT primary-key (#PCDATA)>
+<!ELEMENT order-by (#PCDATA)>
+<!ELEMENT field-maps (map*)>
+<!ELEMENT map (field-name, var-name)>
+<!ELEMENT field-name (#PCDATA)>
+<!ELEMENT var-name (#PCDATA)>
+<!ENTITY copyright "www.libernate.net">
+]>
+<tables>
+	<default>
+		<datasource>libernate.datasource.bizconf.audio</datasource>
+		<db-type>mysql</db-type>
+	</default>
+	 
+	<table>
+		<entity>com.bizconf.inner.portal.bean.BizInfo</entity>
+		<name>t_biz_info</name>
+		<primary-key>id</primary-key>
+		<order-by></order-by>
+	</table>
+</tables>

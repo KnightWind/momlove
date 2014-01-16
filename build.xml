@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="econ" default="war" basedir=".">
+	<!--
+		定义需要用到的常用文件夹
+	-->
+    <property name="src.dir" location="${basedir}/src"></property>
+    <property name="build.dir" location="${basedir}/build"></property>	
+	<property name="build.classes" location="${build.dir}/classes"></property>
+	<property name="build.war" location="${build.dir}/war"></property>
+	<property name="web.webroot" location="${basedir}/WebContent"></property>
+	<property name="web.web-inf" location="${web.webroot}/WEB-INF"></property>
+	<property name="web.lib" location="${web.web-inf}/lib"></property>
+	<property name="war.name" value="themomlove.war"></property>
+	<property name="compile.deprecation" value="true" />
+	<property name="compile.optimize" value="true" />
+		
+	<!--定义系统的环境变量-->
+	<property environment="env"></property>
+	
+	<!--编译所依赖的jar包-->
+	<path id="compile">
+		<fileset dir="${web.lib}" includes="*.jar"></fileset>
+		<!--<fileset dir="${env.CATALINA_HOME}/lib" includes="*.jar"></fileset>-->
+    </path>
+	
+	
+	<target name="clean">
+		<delete dir="${build.dir}"></delete>
+	</target>
+
+	<target name="init" depends="clean">
+		<mkdir dir="${build.dir}"/>
+		<mkdir dir="${build.war}"/>
+		<mkdir dir="${build.classes}"/>
+	</target>
+	
+	<target name="compile" depends="init">
+		<javac srcdir="${src.dir}" destdir="${build.classes}" classpathref="compile" deprecation="${compile.deprecation}" optimize="${compile.optimize}" verbose="no" failonerror="false">
+		</javac>
+	</target>
+	
+	<!--
+		打war包，必须将war包中包含的文件都通通列出来
+	-->
+	<target name="war" depends="compile">
+		<war destfile="${build.war}/${war.name}" webxml="${web.web-inf}/web.xml" >
+			<fileset dir="${web.webroot}">
+				<exclude name="**/*.jar" /> 
+			</fileset>
+			<lib dir="${web.lib}"></lib>
+			<!--<webinf dir="${web.web-inf}"></webinf>-->
+			<classes dir="${build.classes}"></classes>
+		</war>
+	</target>
+</project>
