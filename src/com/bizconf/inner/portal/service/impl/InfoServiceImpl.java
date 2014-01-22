@@ -112,17 +112,17 @@ public class InfoServiceImpl extends BaseService implements InfoService  {
 
 	@Override
 	public List<BizInfo> getPlacardStaticInfos() throws Exception {
-		String sql = "select * from t_biz_info where show_index = 1 and(module_id = ? " +
-				"or module_id = ? or module_id = ? or module_id = ? or module_id = ? or module_id = ?) order by update_time desc limit 0 ,15";
-		return libernate.getEntityListBase(BizInfo.class, sql, new Object[]{2,31,32,33,34,35});
+		String sql = "select * from t_biz_info where show_index = 1 and module_id = ? " +
+				" order by update_time desc limit 0 ,15";
+		return libernate.getEntityListBase(BizInfo.class, sql, new Object[]{2});
 	}
 	/**
 	 * 显示公告牌信息和部门文件夹首页显示信息
 	 */
 	@Override
 	public PageBean<BizInfo> getPlacardStaticInfos(int pagesize, int pageNo) throws Exception {
-		String sql = "select * from t_biz_info where module_id = 2  or " +
-				"(module_id in(31,32,33,34,35) and show_index=1) order by update_time desc";
+		String sql = "select * from t_biz_info where module_id = 2  " +
+				" order by update_time desc";
 		return getPageBeans(BizInfo.class, sql,pageNo,pagesize);
 	}
 

@@ -39,28 +39,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					</td>
 					<td>
 						<div class="ml10">
-							<div class="detail-container" style="width: 750px;">
-									<div class="detail-title">
-										湖南省洞口分店
-									</div>
-									<div class="detail-content pt10" style="max-width: 700px; overflow: auto;">
-										<p>
-										    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;地址：湖南省洞口县XX路xx号<br/>
-										</p>
-										<p>
-										    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;联系人：刘孙球<br/>
-										</p>
-										<p>
-										    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;联系电话：18873907676<br/>
-										</p>
-										<p>
-										    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;邮箱：CentLiu@gmail.com<br/>
-										</p>
-										<p>
-										    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;QQ：1844118383<br/>
-										</p>
-									</div>
-								</div>
 							<c:forEach var="info" items="${pageModel.datas}" varStatus="status">
 								<div class="detail-container" style="width: 750px;">
 									<div class="detail-title">

@@ -17,9 +17,9 @@
 <!--		<property name="url" value="jdbc:mysql://w.rdc.sae.sina.com.cn:3307/app_themomlove?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=utf8" />-->
 <!--		<property name="username" value="kkmx22zmzo" />-->
 <!--		<property name="password" value="mhmii4wy4j2y4lkx1j1zxmmxlil15ljy2505h5mk" />-->
- 		<property name="url" value="jdbc:mysql://localhost:3306/bizinner?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=utf8" /> 
- 		<property name="username" value="root" /> 
- 		<property name="password" value="abc123456" /> 
+ 		<property name="url" value="jdbc:mysql://209.190.18.10:3306/momlove?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=utf8" /> 
+ 		<property name="username" value="momlove" /> 
+ 		<property name="password" value="hellowang" /> 
 		<property name="maxActive" value="50" />
 		<property name="maxWait" value="5000" />
 		<property name="defaultAutoCommit" value="false" />

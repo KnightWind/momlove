@@ -66,27 +66,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<tr>
 					<td style="width:200px;">
 						<div class="acc-container">
-							<h3  class="acc-default-title showcursor" onclick="showMore(5);">常用流程</h3>
+							<h3  class="acc-default-title showcursor">联系方式</h3>
 							<div class="acc-content">
-								<ul id="ul_commonflow">
-									 
-								</ul>
-							</div>
-						</div>
-				
-						<div class="acc-container">
-							<h3  class="acc-default-title showcursor" onclick="showMore(7);">常用申请表</h3>
-							<div class="acc-content">
-								<ul id="ul_application">
-								</ul>
-							</div>
-						</div>
-					
-						<div class="acc-container">
-							<h3  class="acc-default-title showcursor" onclick="showMore(6);">常用软件</h3>
-							<div class="acc-content">
-								<ul id="ul_softwares">
-									 
+								<ul>
+										<li>地址：湖南省武冈市工业园</li>
+										<li>电话：0739888888</li>
+										<li>手机：18873907576</li>
+										<li>邮箱：18873907676@163.com</li>
+										<li>联系人：刘孙球</li>
+										<li>&nbsp;</li>
+										<li>&nbsp;</li>
+										<li>&nbsp;</li>
+										<li>&nbsp;</li>
 								</ul>
 							</div>
 						</div>

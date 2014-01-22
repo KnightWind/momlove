@@ -66,8 +66,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 												<li>
 													<div style="width: 150px; max-height: 100px; overflow: hidden; text-align:center;margin: 0 auto;" >
 														<a  class="fl" href="/view/${actvit.id }"  >
-														<img style="max-height: 100px;" width="150"  src="${actvit.avatarUrl }"" alt="${actvit.title }"" />
+															<img style="max-height: 100px;" width="150"  src="${actvit.avatarUrl }"" alt="${actvit.title }"" />
 														</a>
+														<p>${actvit.title }</p>
 													</div>
 												</li>
 											</c:forEach>
