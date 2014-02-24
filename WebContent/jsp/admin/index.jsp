@@ -45,13 +45,13 @@ var zNodes =[
 	{id:1, pId:0, name:"信息模块", open:true},
 	{id:10, pId:1, name:"信息模块", open:true},
 	{ id:2, pId:10, name:"公司动态", url:"manage/infolist/2", target:"mainFrame"},
-	{ id:21, pId:10, name:"公司动态", url:"manage/infolist/21", target:"mainFrame"},
+	{ id:21, pId:10, name:"行业新闻", url:"manage/infolist/21", target:"mainFrame"},
 	{ id:3, pId:1, name:"产品列表", open:true},
-	{ id:31, pId:3, name:"系列1", url:"/manage/photolist/31", target:"mainFrame"},
-	{ id:32, pId:3, name:"系列2", url:"/manage/photolist/32", target:"mainFrame"},
-	{ id:33, pId:3, name:"系列3", url:"/manage/photolist/33", target:"mainFrame"},
-	{ id:34, pId:3, name:"系列4", url:"/manage/photolist/34", target:"mainFrame"},
-	{ id:35, pId:3, name:"系列5", url:"/manage/photolist/35", target:"mainFrame"},
+	{ id:31, pId:3, name:"奶粉系列", url:"/manage/photolist/31", target:"mainFrame"},
+	{ id:32, pId:3, name:"童装系列", url:"/manage/photolist/32", target:"mainFrame"},
+	{ id:33, pId:3, name:"玩具系列", url:"/manage/photolist/33", target:"mainFrame"},
+	{ id:34, pId:3, name:"日用品系列", url:"/manage/photolist/34", target:"mainFrame"},
+	
 	{ id:5, pId:4, name:"联系我们", url:"/manage/infolist/5", target:"mainFrame"}
 <%--	{ id:85, pId:8, name:"产品展示", url:"/manage/photolist/85", target:"mainFrame"}--%>
 ];

@@ -13,6 +13,43 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<link type="image/x-icon" rel="shortcut icon" href="/assets/favicon.ico" />
 		<link type="text/css" rel="stylesheet" href="/css/biz.base.css?var=11" />
 		<link type="text/css" rel="stylesheet" href="/css/biz.style.css?var=12" />
+		<style type="text/css">
+			#show {
+				background: #FFF;
+				overflow:hidden;
+				border: 1px dashed #CCC;
+				width: 500px;
+			}
+			#show img {
+				border: 3px solid #F2F2F2;
+				max-height: 100px;
+				max-width: 150px;
+			}
+			#inshow {
+				float: left;
+				width: 800%;
+			}
+			#show1 {
+				float: left;
+			}
+			#show p{
+				text-align: center;
+				width:150px;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				course:hand;
+			}
+			#show2 {
+				float: left;
+			}
+			.showitem{
+				float: left;
+				width: 100%;
+				overflow: hidden;
+				
+			}
+		</style>
 	</head>
 	<body>
 		<div class="content-wrapper">
@@ -38,11 +75,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 								<h3 class="acc-default-title showcursor" onclick="showMore(5);">产品系列</h3>
 								<div class="acc-content">
 									<ul id="">
-										<li><a onclick="showMore(31);" href="javascript:void(0);">>>AA系列</a></li>
-										<li><a onclick="showMore(32);" href="javascript:void(0);">>>BB系列</a></li>
-										<li><a onclick="showMore(33);" href="javascript:void(0);">>>CC系列</a></li>
-										<li><a onclick="showMore(34);" href="javascript:void(0);">>>DD系列</a></li>
-										<li><a onclick="showMore(35);" href="javascript:void(0);">>>EE系列</a></li>
+										<li><a onclick="showMore(31);" href="javascript:void(0);">>>奶粉系列</a></li>
+										<li><a onclick="showMore(32);" href="javascript:void(0);">>>童装系列</a></li>
+										<li><a onclick="showMore(33);" href="javascript:void(0);">>>玩具系列</a></li>
+										<li><a onclick="showMore(34);" href="javascript:void(0);">>>日用品系列</a></li>
 									</ul>
 								</div>
 							</div>
@@ -51,9 +87,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 								<div class="acc-content">
 <%--									<ul id="ul_application">--%>
 									<ul>
-										<li>地址：湖南省武冈市工业园</li>
-										<li>电话：0739888888</li>
-										<li>手机：18873907576</li>
+										<li>地址：洞口县工业园108号</li>
+										<li>手机：18873907576  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 18873907676</li>
 										<li>邮箱：18873907676@163.com</li>
 										<li>联系人：刘孙球</li>
 										<li>&nbsp;</li>
@@ -75,9 +110,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							<div class="outlet">
 								<div class="acc-container  acc-notice-panel">
 									<h3 class="acc-title">公司新闻</h3>
-									<div class="acc-content bb0">
+									<div class="acc-content bb0" >
 <%--										<ul id="ul_bizplacard">--%>
-										<ul>
+										<ul style="min-height: 100px;">
 											<c:forEach var="placard" items="${placards}" varStatus="status">
 												 <li class='clearfix'>
 													 <a class="li-smalll-width nobr" href="/view/${placard.id }" title="${placard.title}" >
@@ -96,8 +131,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 								<div id="accordion" class="acc-container acc-expand-panel">
 									<h3 class="acc-title">产品展示</h3>
 									<div class="acc-content team-photos">
-<%--										<ul id="ul_groupactives">--%>
-										<ul>
+<%--										<ul id="ul_groupactives">
+										<!-- <ul>
 											<c:forEach var="actvit" items="${groupactvits}" varStatus="status">
 												<li>
 													<div style="width: 150px; max-height: 100px; overflow: hidden; text-align:center;margin: 0 auto;" >
@@ -107,7 +142,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 													</div>
 												</li>
 											</c:forEach>
-										</ul>
+										</ul> -->--%>
+										<div id="show">
+										<div id="inshow">
+										<div id="show1">
+											<c:forEach var="actvit" items="${groupactvits}" varStatus="status">
+													<a href="/view/${actvit.id }" title="${actvit.title }"><img src="${actvit.avatarUrl }" border="0" /><p >${actvit.title }</p></a>
+											</c:forEach>
+										</div>
+										<div id="show2"></div>
+										</div>
+										</div>
 										<div class="clearfix"></div>
 										<div class="more-data">
 											<a onclick="showMore(31);" href="javascript:void(0);">更多</a>
@@ -123,22 +168,23 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <%--									<ul id="ul_newers">--%>
 									<ul>
 										<li class='b-dashed clearfix'>
-												<div class="employ-image" >
+												<!--<div class="employ-image" >
 													<a  class="fl empoy-job" href="/view/${newer.id }" >
 														<img width="68px" src="/images/bg/mom.jpg" alt="母爱时光" />
 													</a>
-												</div>
+												</div>-->
 												<div class="employ-info">
 <%--												<p><a class="empoy-job" href="/view/${newer.id }" >${newer.title}</a></p>--%>
 												<p>
-													 母爱时光婴幼儿用品有限公司是湖南省武冈市十佳优秀企业
-													 母爱时光婴幼儿用品有限公司是湖南省武冈市十佳优秀企业
-													 母爱时光婴幼儿用品有限公司是湖南省武冈市十佳优秀企业
-													 母爱时光婴幼儿用品有限公司是湖南省武冈市十佳优秀企业
-													 母爱时光婴幼儿用品有限公司是湖南省武冈市十佳优秀企业
-													 母爱时光婴幼儿用品有限公司是湖南省武冈市十佳优秀企业
-													 母爱时光婴幼儿用品有限公司是湖南省武冈市十佳优秀企业
-													 母爱时光婴幼儿用品有限公司是湖南省武冈市十佳优秀企业
+													洞口县母爱时光时光商贸有限公司下属单位：</br>
+													母爱时光孕婴童高沙连锁店</br>
+													母爱时光孕婴童邓家铺连锁店</br>
+													母爱时光孕婴童湾头桥连锁店</br>
+													母爱时光孕婴童电信大楼连锁店</br>
+													母爱时光孕婴童心连心连锁店</br>
+													母爱时光孕婴童安心连锁店</br>
+													</br>
+													洞口县母爱时光商贸有限公司经营理念：质量为根，诚信为本；用心做事，用爱做人
 												</p>
 											</div>
 										</li>
@@ -221,6 +267,22 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			});
 		});
 	});
+	
+	var speed=10;
+	var tab=document.getElementById("show");
+	var tab1=document.getElementById("show1");
+	var tab2=document.getElementById("show2");
+	tab2.innerHTML=tab1.innerHTML;
+	function Marquee(){
+		if(tab2.offsetWidth-tab.scrollLeft<=0)
+		tab.scrollLeft-=tab1.offsetWidth;
+	else{
+		tab.scrollLeft++;
+	}
+	}
+	var MyMar=setInterval(Marquee,speed);
+	tab.onmouseover=function() {clearInterval(MyMar)};
+	tab.onmouseout=function() {MyMar=setInterval(Marquee,speed)};
 	</script>
 	<script type="text/javascript" src="/js/biz.base.js"></script>
 	</body>

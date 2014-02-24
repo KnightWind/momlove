@@ -1,1 +1,0 @@
-var softwares=[{"id":269,"title":"Confcloud","moduleId":6,"avatarUrl":"","createTime":"2013-12-27 13:48","updateTime":"2013-12-31 11:42","fakeAvatar":"","clickNum":1,"showIndex":1},{"id":278,"title":"123tester","moduleId":6,"avatarUrl":"","createTime":"2013-12-27 14:02","updateTime":"2013-12-31 11:42","fakeAvatar":"","clickNum":2,"showIndex":1}]

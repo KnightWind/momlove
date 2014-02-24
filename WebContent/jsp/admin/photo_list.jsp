@@ -121,11 +121,11 @@
 						<span><b>照片预览</b></span>
 					</div>
 				</td>
-				<td width="30%" height="38" bgcolor="d3eaef" class="STYLE10"><div
+<!--<td width="30%" height="38" bgcolor="d3eaef" class="STYLE10"><div
 						align="center">
 						<span><b>描叙</b></span>
 					</div>
-				</td>
+				</td>-->
 				<td width="10%" height="38" bgcolor="d3eaef" class="STYLE10"><div
 						align="center">
 						<span><b>首页显示</b></span>
@@ -158,10 +158,10 @@
 						</div>
 					</td>
 					
-					<td height="32"><div align="center">
+					<!--<td height="32"><div align="center">
 							<span>${info.content } ${info.photodesc}</span>
 						</div>
-					</td>
+					</td>-->
 					<td height="32"><div align="center">
 							<span id="showIndexInfo${info.id }">
 							<c:choose>

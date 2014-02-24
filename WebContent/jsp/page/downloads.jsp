@@ -24,9 +24,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							<h3  class="acc-default-title showcursor">联系方式</h3>
 							<div class="acc-content">
 								<ul>
-										<li>地址：湖南省武冈市工业园</li>
-										<li>电话：0739888888</li>
-										<li>手机：18873907576</li>
+										<li>地址：洞口县工业园108号</li>
+										<li>手机：18873907576  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 18873907676</li>
 										<li>邮箱：18873907676@163.com</li>
 										<li>联系人：刘孙球</li>
 										<li>&nbsp;</li>
