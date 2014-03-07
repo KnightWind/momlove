@@ -68,6 +68,12 @@ public class IndexController {
 			
 			request.setAttribute("pageModel", infoService.getInfosByMoudel(moduleId, 10, pageNo));
 			forward = "/jsp/page/downloads.jsp";
+		}else if(moduleId>60 && moduleId<70){
+			request.setAttribute("info", infoService.getInfoByMoudel(moduleId));
+			forward = "/jsp/page/zsjm.jsp";
+		}else if(moduleId == 7){
+			request.setAttribute("pageModel", infoService.getInfosByMoudel(moduleId, 10, pageNo));
+			forward = "/jsp/page/bbhfzx.jsp";
 		}
 		return new ActionForward.Forward(forward);
 	}

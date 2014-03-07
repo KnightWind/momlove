@@ -105,4 +105,6 @@ public interface InfoService {
 	
 	public List<BizInfo> getIndexProductInfos()throws Exception;
 	
+	public BizInfo getInfoByMoudel(int module_id) throws Exception;
+	
 }

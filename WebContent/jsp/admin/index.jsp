@@ -52,7 +52,12 @@ var zNodes =[
 	{ id:33, pId:3, name:"玩具系列", url:"/manage/photolist/33", target:"mainFrame"},
 	{ id:34, pId:3, name:"日用品系列", url:"/manage/photolist/34", target:"mainFrame"},
 	
-	{ id:5, pId:4, name:"联系我们", url:"/manage/infolist/5", target:"mainFrame"}
+	{ id:5, pId:1, name:"联系我们", url:"/manage/infolist/5", target:"mainFrame"}，
+	{ id:6, pId:1, name:"招商加盟", open:true},
+	{ id:61, pId:6, name:"加盟流程", url:"/manage/toEditZsjm/61", target:"mainFrame"},
+	{ id:62, pId:6, name:"加盟费用", url:"/manage/toEditZsjm/62", target:"mainFrame"},
+	{ id:63, pId:6, name:"常见问题", url:"/manage/toEditZsjm/63", target:"mainFrame"},
+	{ id:7, pId:1, name:"宝宝呵护中心", url:"/manage/infolist/7", target:"mainFrame"}
 <%--	{ id:85, pId:8, name:"产品展示", url:"/manage/photolist/85", target:"mainFrame"}--%>
 ];
 

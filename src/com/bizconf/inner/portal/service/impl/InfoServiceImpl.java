@@ -132,6 +132,9 @@ public class InfoServiceImpl extends BaseService implements InfoService  {
 		 libernate.updateEntity(info);
 	}
 	
-	
-	
+	@Override
+	public BizInfo getInfoByMoudel(int module_id) throws Exception {
+		String sql = "select * from  t_biz_info where module_id = "+module_id;
+		return libernate.getEntity(sql, BizInfo.class);
+	}
 }

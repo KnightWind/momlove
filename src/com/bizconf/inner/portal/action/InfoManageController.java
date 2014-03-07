@@ -186,5 +186,30 @@ public class InfoManageController  extends BaseController {
 //	}
 	
 	
+	@AsController(path = "/toEditZsjm/{moudulId:([0-9]+)}")
+	public Object toEditZsjm(@CParam("moudulId") int moduleId, HttpServletRequest request, HttpServletResponse response){
+			try {
+				request.setAttribute("info", infoService.getInfoByMoudel(moduleId));
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			request.setAttribute("moduleId", moduleId);
+			return new ActionForward.Forward("/jsp/admin/editZsjm.jsp");
+	}
 	
+	@AsController(path = "/saveZsjm")
+	public Object saveBridgeNum(BizInfo info, HttpServletRequest request, HttpServletResponse response)
+			throws Exception {
+			String op = "add"; 
+		 	if(info.getId()>0) 
+		 		op = "update";
+		 	request.setAttribute("op", op);
+			if(infoService.saveBizInfo(info)!=null){
+		 		request.setAttribute("status", 1);
+		 	}else{
+		 		request.setAttribute("status", 0);
+		 	}
+			String forwardUrl = "/manage/toEditZsjm";
+			return new ActionForward.Forward(forwardUrl);
+	}
 }

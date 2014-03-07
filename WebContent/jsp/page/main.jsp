@@ -9,7 +9,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta charset="utf-8"/>
-		<title>主页</title>
+		<title>母爱时光官网，婴童产品，婴儿奶粉，童装，玩具系列</title>
+		<meta http-equiv="keywords" content="母爱时光,儿童产品,婴童产品，婴童奶粉">
+		<meta http-equiv="description" content="洞口县母爱时光商贸有限公司，关注婴童产品，儿童奶粉系列，儿童玩具系列，是湖南邵阳地区最大的童婴连锁品牌">
 		<link type="image/x-icon" rel="shortcut icon" href="/assets/favicon.ico" />
 		<link type="text/css" rel="stylesheet" href="/css/biz.base.css?var=11" />
 		<link type="text/css" rel="stylesheet" href="/css/biz.style.css?var=12" />
@@ -59,7 +61,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						<a href="#"><img height="200" src="/images/bg/banner-01.jpg" data-src="" alt="Third slide"/></a>
 					</div>
 					<div>
-						<a href="#"><img height="200" src="/images/bg/a1.png" data-src="" alt="Third slide"/></a>
+						<a href="#"><img height="200" src="/images/bg/productshow.png" data-src="" alt="Third slide"/></a>
 					</div>
 					<div>
 						<a href="#"><img height="200" src="/images/bg/banner-03.jpg" data-src="" alt="Third slide"/></a>
