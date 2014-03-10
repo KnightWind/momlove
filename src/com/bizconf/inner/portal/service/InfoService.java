@@ -91,7 +91,7 @@ public interface InfoService {
 	PageBean<BizInfo> getPlacardStaticInfos(int pagesize, int pageNo) throws Exception;
 	
 	/**
-	 * 
+	 *  
 	 * @param info
 	 * @return
 	 * @throws Exception

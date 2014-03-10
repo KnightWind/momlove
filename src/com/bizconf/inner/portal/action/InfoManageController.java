@@ -209,7 +209,7 @@ public class InfoManageController  extends BaseController {
 		 	}else{
 		 		request.setAttribute("status", 0);
 		 	}
-			String forwardUrl = "/manage/toEditZsjm";
+			String forwardUrl = "/manage/toEditZsjm/"+info.getModuleId();
 			return new ActionForward.Forward(forwardUrl);
 	}
 }

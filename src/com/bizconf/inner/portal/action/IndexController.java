@@ -57,14 +57,14 @@ public class IndexController {
 			request.setAttribute("pageModel", infoService.getPlacardStaticInfos(10, pageNo));
 			forward = "/jsp/page/bizplacard.jsp";
 			
-		}else if(moduleId>30){
+		}else if(moduleId>30 && moduleId<40){
 			
 			request.setAttribute("pageModel", infoService.getInfosByMoudel(moduleId, 10, pageNo));
 			forward = "/jsp/page/bizdepts.jsp";
 		}else if(moduleId==30){
 			request.setAttribute("pageModel", infoService.getInfosByMoudel(moduleId, 10, pageNo));
 			forward = "/jsp/page/bizdepts.jsp";
-		}else if(moduleId>4 && moduleId<8){
+		}else if(moduleId>4 && moduleId<7){
 			
 			request.setAttribute("pageModel", infoService.getInfosByMoudel(moduleId, 10, pageNo));
 			forward = "/jsp/page/downloads.jsp";
